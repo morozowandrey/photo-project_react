@@ -7,10 +7,11 @@ import './styles/style.css';
 import Home from './components/Home.js';
 import Index from './components/Index-page.js';
 import Header from './components/Header.js';
-import Footer from './components/Footer.js';
 import Contact from './components/Contact.js';
 import Info from './components/Info.js';
 import Slider from './components/Slider.js';
+import Footer from './components/Footer.js';
+
 
 ReactDOM.render(
     <HashRouter>
@@ -20,11 +21,10 @@ ReactDOM.render(
           <Route path="/index" component={Index} />
           <Route path="/contact" component={Contact} />
           <Route path="/info" component={Info} />
-          <Route path="/slider/:sliderId" component={Slider} />
+          <Route path="/slider/:sliderId/:slideNum" component={Slider} />
         <Footer/>
       </div>
     </HashRouter>,
     document.getElementById('root')
   );
-
   
