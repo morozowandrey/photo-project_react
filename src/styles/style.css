@@ -386,24 +386,7 @@ button:focus {
   max-width: 100%;
   max-height: 100%;
 }
-.slider .slick-next,
-.slider .slick-prev {
-  z-index: 5;
-  opacity: 0;
-}
-.slider .slick-next {
-  height: 100vh;
-  width: 50vw;
-  position: absolute;
-  right: 0;
-  cursor: url("../images/arr-right.svg"), auto;
-}
-.slider .slick-prev {
-  height: 100vh;
-  width: 50vw;
-  position: absolute;
-  left: 0;
-}
+
 .index {
   padding: 0 20px;
   padding-bottom: 15px;
@@ -450,8 +433,6 @@ button:focus {
     padding: 0;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-
-    cursor: pointer;
 
     color: transparent;
     border: none;
@@ -740,23 +721,22 @@ button:focus {
 
 .slick-slider .slick-next,
 .slick-slider .slick-prev {
-    z-index: 5;
-    opacity: 0;
+  z-index: 5;
+  opacity: 0;
 }
-
 .slick-slider .slick-next {
-    height: 100vh;
-    width: 50vw;
-    position: absolute;
-    right: 0;
-    cursor: url(../images/arr-right.svg), auto;
-  }
-  .slick-slider .slick-prev {
-    height: 100vh;
-    width: 50vw;
-    position: absolute;
-    cursor: url(../images/arr_left.svg), auto;
-    left: 0;
+  height: 100vh;
+  width: 50vw;
+  position: absolute;
+  right: 0;
+  cursor: url("../images/arr-right.svg"), auto;
+}
+.slick-slider .slick-prev {
+  height: 100vh;
+  width: 50vw;
+  position: absolute;
+  cursor: url("../images/arr-left.svg"), auto;
+  left: 0;
 }
 
 @media screen and (max-width: 1024px) {
