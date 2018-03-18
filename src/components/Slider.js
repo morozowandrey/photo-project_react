@@ -404,7 +404,7 @@ const TextObj = {
 class SliderComponent extends React.Component {
     componentDidMount() {
         setTimeout(() => {
-            this.refs.slider.slickGoTo(this.props.match.params.slideNum);
+            this.refs.slider.slickGoTo(parseInt(this.props.match.params.slideNum)+1);
         }, 0);
     };
 

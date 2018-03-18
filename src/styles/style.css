@@ -435,25 +435,53 @@ button:focus {
   padding-top: 47px;
   padding-bottom: 47px;
 }
-.index-project {
+.index-project-wrap {
   padding-top: 50px;
   margin-right: 25px;
   display: inline-block;
 }
-.index-project__heading {
+.index-project-wrap__heading {
   font-size: 27px;
   line-height: 1.37;
   color: #000;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
-.projects-item__img {
+.index-project-item {
   display: inline-block;
-  max-width: 200px;
-  max-height: 200px;
-  padding-bottom: 35px;
-  padding-right: 25px;
+  margin-bottom: 35px;
+  margin-right: 25px;
+
+  position: relative;
+}
+.index-project-item:hover .index-project-item__img {
+  opacity: 0;
+}
+.index-project-item:hover .index-project-item__img_hover {
+  display: inline-block;
+  opacity: 1;
+  z-index: 2;
+}
+.index-project-item__img {
+  display: inline-block;
+  width: 200px;
+  height: auto;
   vertical-align: middle;
+}
+.index-project-item__img.index-project-item__img_hover {
+  margin: 0 auto;
+  padding: 0;
+  display: none;
+  position: absolute;
+  top:50%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 300px;
+  height: auto;
+  transform: translate3d(-10%, -50%, 0);
+  -webkit-transform: translate3d(-10%, -50%, 0);
+  -ms-transform: translate3d(-10%, -50%, 0);
 }
 
 
@@ -833,6 +861,12 @@ button:focus {
     height: auto;
     padding: 80px 20px;
   }
+  .index-project-item__img.index-project-item__img_hover {
+    max-width: 250px;
+    transform: translate3d(0, -50%, 0);
+    -webkit-transform: translate3d(0, -50%, 0);
+    -ms-transform: translate3d(0, -50%, 0);
+  }
 }
 @media screen and (max-width: 380px) {
   .info {
@@ -855,11 +889,12 @@ button:focus {
   .index-project {
       margin-right: 0px;
   }
-  .projects-item__img {
-      padding-bottom: 15px;
-      padding-right: 15px;
-      max-height: 125px;
-      max-width: 125px;
+  .index-project-item {
+      margin-bottom: 10px;
+      margin-right: 10px;
+  }
+  .index-project-item__img {
+      width: 125px;
   }
   .slider-slide__text {
     font-size: 16px;
