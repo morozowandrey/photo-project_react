@@ -1107,7 +1107,7 @@ class Index extends React.Component {
                 };
                 scroll();
             }
-        }
+        };
         scrollToLocation();
     };
 
@@ -1118,7 +1118,7 @@ class Index extends React.Component {
                 <div className="index-project">
                     {
                         IndexImg[arg].map(function (arg2, i2) {
-                            return <Link to={"/slider/" + arg + "/" + i2} className="index-project-item" key={arg2 + i2}>
+                            return <Link to={"/slider/" + arg + "/" + (i2+1)} className="index-project-item" key={arg2 + i2}>
                                 <img src={arg2[0]} alt="" className="index-project-item__img" />
                                 <img src={arg2[1]} alt="" className="index-project-item__img index-project-item__img_hover" />
                             </Link>
