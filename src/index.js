@@ -11,6 +11,7 @@ import Header from './components/Header.js';
 import Contact from './components/Contact.js';
 import Info from './components/Info.js';
 import Slider from './components/Slider.js';
+import ProjectInfo from './components/ProjectInfo.js';
 import Footer from './components/Footer.js';
 
 ReactDOM.render(
@@ -27,6 +28,7 @@ ReactDOM.render(
       <Route path="/index" component={Index} />
       <Route path="/contact" component={Contact} />
       <Route path="/info" component={Info} />
+      <Route path="/project-info" component={ProjectInfo} />
       <Route path="/slider/:sliderId/:slideNum" component={Slider} />
       <Footer />
     </div>

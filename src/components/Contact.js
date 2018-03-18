@@ -1,12 +1,19 @@
 import React from 'react';
+import Mailto from 'react-mailto.js';
 
 class Contact extends React.Component {
-    render(){
+    render() {
         return (
             <main className="contact wrapper">
                 <div className="contact-box">
                     <p className="contact-box__heading">CONTACT FOR FURTHER INQUIERES</p>
-                    <p className="contact-box__email">info@evgeniypavlov.com</p>
+                    <Mailto
+                        className="contact-box__email"
+                        secure={true}
+                        to='info@evgeniypavlov.com'
+                    >
+                        info@evgeniypavlov.com
+                    </Mailto>
                 </div>
             </main>
         );
