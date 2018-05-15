@@ -1300,7 +1300,7 @@ class Index extends React.Component {
     }
 
     render() {
-        let indexProject = IndexProjectsShow.map(function (galleryObj, i) {
+        let indexProject = IndexProjectsToLoad.map(function (galleryObj, i) {
             let galleryName = Object.keys(galleryObj)[0];
 
             return <div className="index-project-wrap" key={galleryName + i} id={galleryName}>
