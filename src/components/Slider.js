@@ -406,6 +406,16 @@ class SliderComponent extends React.Component {
         setTimeout(() => {
             this.refs.slider.slickGoTo(parseInt(this.props.match.params.slideNum));
         }, 0);
+
+        console.log(this.refs.slider);
+
+        this.refs.slider.innerSlider.props.onInit();
+        this.refs.slider.innerSlider.props.afterChange();
+    };
+
+    state = {
+        activeSlide: 0,
+        allSlides: 0
     };
 
     render() {
@@ -437,6 +447,19 @@ class SliderComponent extends React.Component {
             className: 'slick-slider-fade',
             cssEase: 'none',
             lazyLoad: true,
+            dots: true,
+            onInit: (event, slick, currentSlide, nextSlide) => {
+                var currentSlide = this.refs.slider.innerSlider.props.initialSlide + 1;
+                var slideCount = this.refs.slider.props.children.length;
+                this.setState({ allSlides: slideCount })
+            },
+            // afterChange: (event, slick, currentSlide, nextSlide) => {
+            //     var currentSlide = event + 1;
+            //     console.log(currentSlide);
+            // },
+            beforeChange: (current, next) => this.setState({ activeSlide: next }),
+            afterChange: current => this.setState({ activeSlide2: current })
+
 
             // loop slider logic
             // beforeChange: (oldIndex, newIndex) => {
@@ -461,9 +484,14 @@ class SliderComponent extends React.Component {
         };
 
         return (
-            <Slider {...settings} ref="slider">
-                {photos}
-            </Slider>
+            <div className="slider-wrapper">
+                <p className="slider-counter">
+                    {this.state.activeSlide + 1} / {this.state.allSlides}
+                </p>
+                <Slider {...settings} ref="slider">
+                    {photos}
+                </Slider>
+            </div>
         );
     }
 };
