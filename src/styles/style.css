@@ -209,7 +209,7 @@ button:focus {
   overflow: hidden;
 }
 .home-content {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   text-align: center;
 }
@@ -225,6 +225,14 @@ button:focus {
 .home-content-item-imgbox {
   display: inline-block;
   padding: 0 5px;
+}
+.home-content-item__img.home-content-item__img_vertical {
+  height: auto;
+  width: 31px;
+}
+.home-content-item__img.home-content-item__img_horisontal {
+  height: 31px;
+  width: auto;
 }
 .home-content-item__img {
   height: auto;
@@ -291,7 +299,7 @@ button:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 50px 30px 10px;
+  padding: 30px 50px;
 
   position: fixed;
   min-width: 100%;
@@ -311,7 +319,7 @@ button:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 30px 50px;
+  padding: 30px 50px;
 
   position: fixed;
   bottom: 0;

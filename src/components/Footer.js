@@ -19,7 +19,7 @@ class Footer extends React.Component {
         return (
             <footer className="footer wrapper">
                 {indexLink}
-                {/* <Link to="/contact" className="contact-link page-link">Contact</Link> */}
+                <Link to="/contact" className="contact-link page-link">Contact</Link>
                 
             </footer>
         );

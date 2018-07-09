@@ -51,10 +51,6 @@ let IndexProjectsToLoad = [
                 require('../images/index-hover/1974-1985-orwochrom/evgeniy-pavlov-orwochrom-06-1986.jpg'),
             ],
             [
-                require('../images/index-thumbnails/1974-1985-orwochrom/evgeniy-pavlov-orwochrom-06-1986.jpg'),
-                require('../images/index-hover/1974-1985-orwochrom/evgeniy-pavlov-orwochrom-06-1986.jpg'),
-            ],
-            [
                 require('../images/index-thumbnails/1974-1985-orwochrom/evgeniy-pavlov-orwochrom-07-1985.jpg'),
                 require('../images/index-hover/1974-1985-orwochrom/evgeniy-pavlov-orwochrom-07-1985.jpg'),
             ],
