@@ -85,7 +85,6 @@ class Home extends React.Component {
     setTimeout(() => {
       let images = Array.prototype.slice.call(document.getElementsByClassName("home-content-item__img"));
       images.map(function (image, i) {
-        console.log(image.offsetHeight);
         if (image.offsetHeight > image.offsetWidth) {
           image.classList.add("home-content-item__img_vertical");
         }
