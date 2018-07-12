@@ -81,19 +81,6 @@ const HomePrev = {
 };
 
 class Home extends React.Component {
-  componentDidMount() {
-    setTimeout(() => {
-      let images = Array.prototype.slice.call(document.getElementsByClassName("home-content-item__img"));
-      images.map(function (image, i) {
-        if (image.offsetHeight > image.offsetWidth) {
-          image.classList.add("home-content-item__img_vertical");
-        }
-        else if (image.offsetHeight < image.offsetWidth) {
-          image.classList.add("home-content-item__img_horisontal");
-        }
-      });
-    }, 500);
-  }
 
   render() {
 
@@ -108,7 +95,7 @@ class Home extends React.Component {
           <p className="home-content-item__text">{prn.replace(/_/g, ' ')}</p>
 
           <div className="home-content-item-imgbox">
-            <img src={HomePrev[projectName][0]} className="home-content-item__img" alt="" />
+            <img src={HomePrev[projectName][0]} className="home-content-item__img home-content-item__img_prew" alt="" />
             <img src={HomePrev[projectName][1]} className="home-content-item__img home-content-item__img_hover" alt="" />
           </div>
 
