@@ -96,7 +96,8 @@ class Home extends React.Component {
 
           <div className="home-content-item-imgbox">
             <img src={HomePrev[projectName][0]} className="home-content-item__img home-content-item__img_prew" alt="" />
-            <img src={HomePrev[projectName][1]} className="home-content-item__img home-content-item__img_hover" alt="" />
+            {/* <img src={HomePrev[projectName][1]} className="home-content-item__img home-content-item__img_hover" alt="" /> */}
+            <div className="home-content-item__img home-content-item__img_block home-content-item__img_hover" style={{ backgroundImage: `url(${HomePrev[projectName][1]})` }}></div>
           </div>
 
           <p className="home-content-item__text">{dates}</p>
