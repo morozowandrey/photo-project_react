@@ -1255,10 +1255,12 @@ class Index extends React.Component {
 
     componentDidMount() {
 
-        window.addEventListener('scroll', this.handleScroll);
-        console.log(this.handleScroll);
+        // window.addEventListener('scroll', this.handleScroll);
+        // React.addEventListener(document, "scroll", this.handleScroll)
+        // window.addEventListener('scroll', (e) => console.log(e.target));
 
-        // document.addEventListener('scroll', loadMore);
+        const list = ReactDOM.findDOMNode(this.refs.list)
+        list.addEventListener('scroll', this.handleScroll);
 
         let scrollToLocation = () => {
             const { hash } = window.location;
@@ -1281,25 +1283,29 @@ class Index extends React.Component {
         };
         scrollToLocation();
     }
-    
+
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
+        // window.removeEventListener('scroll', this.handleScroll);
+        // React.removeEventListener(document, "scroll", this.handleScroll)
+        const list = ReactDOM.findDOMNode(this.refs.list)
+        list.removeEventListener('scroll', this._handleScroll);
     }
 
-    handleScroll(event) {
-        if (window.scrollY === 0 ) {
+    handleScroll(eventObject) {
+        if (window.scrollY == 0) {
             console.log('no scroll');
         }
         else if (window.scrollY !== 0) {
-            console.log('no scroll');
+            console.log('scroll');
         }
     }
+
 
     render() {
         let indexProject = IndexProjectsToLoad.map(function (galleryObj, i) {
             let galleryName = Object.keys(galleryObj)[0];
 
-            return <div className="index-project-wrap" key={galleryName + i} id={galleryName}>
+            return <div className="index-project-wrap" key={galleryName + i} id={galleryName} ref="list">
                 <p className="index-project-wrap__heading ">{galleryName.replace(/_/g, ' ')}</p>
                 <div className="index-project">
                     {
@@ -1311,21 +1317,21 @@ class Index extends React.Component {
                         })
                     }
                 </div>
-            </div>
+            </div >
         })
 
-        return (
-            <main className="index wrapper">
-                <div className="index-content">
-                    {/* <InfiniteScroll
+    return(
+            <main className = "index wrapper" >
+            <div className="index-content">
+                {/* <InfiniteScroll
                         pageStart={0}
                         loadMore={loadMore}
                         hasMore={true}
                         useWindow={false}
                         >
                     </InfiniteScroll> */}
-                    {indexProject}
-                </div>
+                {indexProject}
+            </div>
             </main>
         );
     }

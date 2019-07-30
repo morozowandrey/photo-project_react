@@ -509,6 +509,11 @@ button:focus {
   margin-right: 25px;
   display: inline-block;
 }
+.index-project {
+  /* opacity: 0;
+  transition: all 500ms;
+  transform: translateY(50%); */
+}
 .index-project-wrap__heading {
   font-size: 27px;
   line-height: 1.37;
@@ -1011,4 +1016,10 @@ button:focus {
   .slider-slide__text {
     font-size: 16px;
   }
+}
+
+.fade {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 500ms;
 }

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emarketeross/simple-react-intersection-observer": "^0.1.11",
+    "@emarketeross/simple-react-intersection-observer": "^0.1.13",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
