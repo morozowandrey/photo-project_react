@@ -1277,7 +1277,7 @@ class Index extends React.Component {
     //     };
     // }
 
-    componentDidMount() {
+    componentDidMount() { 
 
         window.addEventListener('scroll', this.handleScroll);
 
