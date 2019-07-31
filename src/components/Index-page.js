@@ -1253,14 +1253,40 @@ function loadMore() {
 
 class Index extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            isHovering: false,
+        };
+        this.handleMouseHover = this.handleMouseHover.bind(this);
+    }
+
+    handleMouseHover = (event) => {
+        console.log(state);
+        
+        this.setState({ isHovering: !state.isHovering });
+    }
+
+    // handleMouseHover() {
+        
+    // }
+
+    // toggleHoverState(state) {
+    //     return {
+    //         isHovering: !state.isHovering,
+    //     };
+    // }
+
     componentDidMount() {
 
-        // window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('scroll', this.handleScroll);
+
         // React.addEventListener(document, "scroll", this.handleScroll)
         // window.addEventListener('scroll', (e) => console.log(e.target));
 
-        const list = ReactDOM.findDOMNode(this.refs.list)
-        list.addEventListener('scroll', this.handleScroll);
+        // const list = ReactDOM.findDOMNode(this.refs.list)
+
+        // list.addEventListener('scroll', this.handleScroll);
 
         let scrollToLocation = () => {
             const { hash } = window.location;
@@ -1281,14 +1307,16 @@ class Index extends React.Component {
                 scroll();
             }
         };
+
         scrollToLocation();
     }
 
     componentWillUnmount() {
-        // window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('scroll', this.handleScroll);
+
         // React.removeEventListener(document, "scroll", this.handleScroll)
-        const list = ReactDOM.findDOMNode(this.refs.list)
-        list.removeEventListener('scroll', this._handleScroll);
+        // const list = ReactDOM.findDOMNode(this.refs.list)
+        // list.removeEventListener('scroll', this._handleScroll);
     }
 
     handleScroll(eventObject) {
@@ -1300,9 +1328,8 @@ class Index extends React.Component {
         }
     }
 
-
-    render() {
-        let indexProject = IndexProjectsToLoad.map(function (galleryObj, i) {
+    indexProject() {
+        return IndexProjectsToLoad.map(function (galleryObj, i) {
             let galleryName = Object.keys(galleryObj)[0];
 
             return <div className="index-project-wrap" key={galleryName + i} id={galleryName} ref="list">
@@ -1311,27 +1338,25 @@ class Index extends React.Component {
                     {
                         Object.values(galleryObj)[0].map(function (imgsSrc, i2) {
                             return <Link to={"/slider/" + galleryName + "/" + (i2 + 1)} className="index-project-item" key={imgsSrc + i2}>
-                                <img src={imgsSrc[0]} alt="" className="index-project-item__img" />
-                                <img src={imgsSrc[1]} alt="" className="index-project-item__img index-project-item__img_hover" />
+                                <img src={imgsSrc[0]} alt="" className="index-project-item__img"
+                                    onMouseEnter={this.handleMouseHover.bind(this)}
+                                    onMouseLeave={this.handleMouseHover.bind(this)}
+                                />
+                                { this.state.isHovering && <img src={imgsSrc[1]} alt="" className="index-project-item__img index-project-item__img_hover" /> }
                             </Link>
                         })
                     }
                 </div>
             </div >
-        })
+        });
+    }
 
-    return(
-            <main className = "index wrapper" >
-            <div className="index-content">
-                {/* <InfiniteScroll
-                        pageStart={0}
-                        loadMore={loadMore}
-                        hasMore={true}
-                        useWindow={false}
-                        >
-                    </InfiniteScroll> */}
-                {indexProject}
-            </div>
+    render() {
+        return (
+            <main className="index wrapper" >
+                <div className="index-content">
+                    {this.indexProject()}
+                </div>
             </main>
         );
     }
