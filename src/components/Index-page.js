@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import InfiniteScroll from 'react-infinite-scroller';
 
-import ImageItem from './item';
+import ImageItem from './index-project';
 import { IndexProjectsToLoad, IndexProjectsShow } from '../imgs';
 
 function loadMore() {
@@ -29,13 +29,6 @@ class Index extends React.Component {
 
         window.addEventListener('scroll', this.handleScroll);
 
-        // React.addEventListener(document, "scroll", this.handleScroll)
-        // window.addEventListener('scroll', (e) => console.log(e.target));
-
-        // const list = ReactDOM.findDOMNode(this.refs.list)
-
-        // list.addEventListener('scroll', this.handleScroll);
-
         let scrollToLocation = () => {
             const { hash } = window.location;
             if (hash !== '') {
@@ -45,9 +38,14 @@ class Index extends React.Component {
                 const scroll = () => {
                     retries += 0;
                     if (retries > 50) return;
-                    const element = document.getElementById(id);
-                    if (element) {
-                        setTimeout(() => element.scrollIntoView(), 0);
+                    if (id) {
+                        setTimeout(() => {
+                            const element = document.getElementById(id);
+                            const elementParent = document.getElementsByClassName('react-wrap')[0];
+                            const headerHeight = document.getElementsByClassName('header')[0].offsetHeight;
+                            const count = element.offsetTop - elementParent.scrollTop - headerHeight;
+                            elementParent.scrollBy({ top: count, left: 0, behavior: 'smooth' });
+                        }, 300);
                     } else {
                         setTimeout(scroll, 100);
                     }
@@ -61,10 +59,6 @@ class Index extends React.Component {
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
-
-        // React.removeEventListener(document, "scroll", this.handleScroll)
-        // const list = ReactDOM.findDOMNode(this.refs.list)
-        // list.removeEventListener('scroll', this._handleScroll);
     }
 
     handleScroll(eventObject) {
@@ -84,11 +78,11 @@ class Index extends React.Component {
                 <div className="index-content">
                     {/* {this.indexProject()} */}
                     {IndexProjectsToLoad.map((galleryObj, i) => (
-                        <div className="index-project-wrap" key={galleryObj + i} id={galleryObj} ref="list">
+                        <div className="index-project-wrap" key={galleryObj + i} id={Object.keys(galleryObj)[0]} ref="list">
                             <p className="index-project-wrap__heading ">{Object.keys(galleryObj)[0].replace(/_/g, ' ')}</p>
                             <div className="index-project">
                                 {Object.values(galleryObj)[0].map((img, i) => (
-                                    <ImageItem gallery={galleryObj} index={i} img={img} />
+                                    <ImageItem key={img + i} gallery={galleryObj} index={i} img={img} />
                                 ))}
                             </div>
                         </div>
