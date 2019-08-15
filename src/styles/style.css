@@ -529,19 +529,31 @@ button:focus {
   position: relative;
 }
 .index-project-item:hover .index-project-item__img {
-  opacity: 0;
+  display: none;
+}
+.index-project-item:hover .index-project-item__img_progressive {
+  display: block;
 }
 .index-project-item:hover .index-project-item__img_hover {
   display: inline-block;
   opacity: 1;
   z-index: 2;
 }
-.index-project-item__img {
+.index-project-item__img,
+.index-project-item__img_progressive,
+.progressive-box {
   display: inline-block;
   width: 150px;
   height: auto;
   vertical-align: middle;
 }
+
+.index-project-item__img_progressive {
+  display: none;
+  transform: scale(1.5);
+  filter: blur(2px);
+}
+
 .index-project-item__img.index-project-item__img_hover {
   margin: 0 auto;
   padding: 0;
