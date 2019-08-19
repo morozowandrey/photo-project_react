@@ -23,6 +23,8 @@ ReactDOM.render(
         <base href="/"></base>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
         <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+        {/* <link rel="preload" href="/fonts/gt-america-standard-regular.woff2" as="font" type="font/woff2" crossorigin></link> */}
       </Helmet>
       <Header />
       <Route exact path="/" component={Home} />

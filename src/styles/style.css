@@ -529,11 +529,10 @@ button:focus {
   position: relative;
 }
 .index-project-item:hover .index-project-item__img {
-  display: none;
+  opacity: 0;
 }
-.index-project-item:hover .index-project-item__img_progressive {
-  display: block;
-}
+
+.index-project-item:hover .index-project-item__img_progressive,
 .index-project-item:hover .index-project-item__img_hover {
   display: inline-block;
   opacity: 1;
@@ -554,6 +553,7 @@ button:focus {
   filter: blur(2px);
 }
 
+.index-project-item__img.index-project-item__img_progressive,
 .index-project-item__img.index-project-item__img_hover {
   margin: 0 auto;
   padding: 0;

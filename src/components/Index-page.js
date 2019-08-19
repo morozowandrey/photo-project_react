@@ -1,15 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import InfiniteScroll from 'react-infinite-scroller';
 
 import ImageItem from './index-project';
-import { IndexProjectsToLoad, IndexProjectsShow } from '../imgs';
-
-function loadMore() {
-    console.log(IndexProjectsShow);
-    IndexProjectsShow.push(IndexProjectsToLoad.pop());
-    console.log(IndexProjectsShow);
-}
+import { IndexProjectsToLoad } from '../imgs';
 
 class Index extends React.Component {
     state = {

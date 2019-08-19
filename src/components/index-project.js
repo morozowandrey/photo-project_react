@@ -1,39 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import InfiniteScroll from 'react-infinite-scroller';
-import { IndexProjectsToLoad, IndexProjectsShow } from '../imgs';
-
-function loadMore() {
-    console.log(IndexProjectsShow);
-    IndexProjectsShow.push(IndexProjectsToLoad.pop());
-    console.log(IndexProjectsShow);
-}
 
 class Index extends React.Component {
     state = {
         isHovering: false,
+        progressive: false
     };
 
     handleMouseHover = (img) => () => {
-        this.setState({ isHovering: true });
-
-        let box = document.getElementById(img[1].split('media/')[1].split('.')[0]);
-        let progressiveImg = box.getElementsByClassName('index-project-item__img_hover');
-
-        let imgLarge = new Image();
-        imgLarge.src = img[1];
-        imgLarge.onload = function () {
-            document.getElementById(img[1].split('media/')[1]).remove();
-        };
+        this.setState({
+            isHovering: true,
+            progressive: true
+        });
     }
 
     handleMouseLeave = () => {
         this.setState({ isHovering: false });
     }
 
+    handleImageLoaded() {
+        this.setState({
+            progressive: false
+        });
+    }
+
     render() {
         const { gallery, img, index } = this.props;
-        const { isHovering } = this.state;
+        const { isHovering, progressive } = this.state;
 
         return (
             <Link
@@ -45,12 +38,21 @@ class Index extends React.Component {
                 onMouseLeave={this.handleMouseLeave}
             >
                 <img src={img[0]} alt="" className="index-project-item__img" />
-
+                {progressive &&
+                    <img
+                        src={img[0]}
+                        className="index-project-item__img index-project-item__img_progressive"
+                        alt=""
+                    />
+                }
                 {isHovering &&
-                    <div className="progressive-box">
-                    <img id={img[1].split('media/')[1]} src={img[0]} alt="" className="index-project-item__img_progressive" />
-                    <img id={img[1].split('media/')[1]+2} src={img[1]} alt="" className="index-project-item__img index-project-item__img_hover" />
-                </div>
+                    <img
+                        src={img[1]}
+                        id={img[1].split('media/')[1].split('.')[0] + '__big-img'}
+                        className="index-project-item__img index-project-item__img_hover"
+                        onLoad={this.handleImageLoaded.bind(this)}
+                        alt=""
+                    />
                 }
             </Link>
         );
