@@ -54,13 +54,8 @@ class Index extends React.Component {
     }
 
     handleScroll(eventObject) {
-        if (window.scrollY == 0) {
-            console.log('no scroll');
-        }
-        else if (window.scrollY !== 0) {
-            console.log('scroll');
-        }
-    }
+        window.scrollY == 0 ? console.log('no scroll') : console.log('scroll');
+    };
 
     render() {
         const { hoveredImage } = this.state;
@@ -68,7 +63,6 @@ class Index extends React.Component {
         return (
             <main className="index wrapper" >
                 <div className="index-content">
-                    {/* {this.indexProject()} */}
                     {IndexProjectsToLoad.map((galleryObj, i) => (
                         <div className="index-project-wrap" key={galleryObj + i} id={Object.keys(galleryObj)[0]} ref="list">
                             <p className="index-project-wrap__heading ">{Object.keys(galleryObj)[0].replace(/_/g, ' ')}</p>
