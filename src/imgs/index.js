@@ -2,6 +2,7 @@ export const IndexProjectsToLoad = [
 
     {
         violin_1972: [
+            ['Barbecue party '],
             [
                 require('../images/index-thumbnails/1972-violin/evgeniy-pavlov-violin-1972-01.jpg'),
                 require('../images/index-hover/1972-violin/evgeniy-pavlov-violin-1972-01.jpg'),

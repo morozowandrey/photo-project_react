@@ -4,9 +4,11 @@ import ImageItem from './index-project';
 import { IndexProjectsToLoad } from '../imgs';
 
 class Index extends React.Component {
+
     state = {
         isHovering: false,
-        hoeveredImage: ''
+        hoeveredImage: '',
+        projectIndex: 0
     };
 
     handleMouseHover = (img) => () => {
@@ -32,11 +34,15 @@ class Index extends React.Component {
                     if (retries > 50) return;
                     if (id) {
                         setTimeout(() => {
-                            const element = document.getElementById(id);
-                            const elementParent = document.getElementsByClassName('react-wrap')[0];
-                            const headerHeight = document.getElementsByClassName('header')[0].offsetHeight;
-                            const count = element.offsetTop - elementParent.scrollTop - headerHeight;
-                            elementParent.scrollBy({ top: count, left: 0, behavior: 'smooth' });
+                            console.log(this.state.projectIndex);
+                            
+                            if (this.state.projectIndex != 0) {
+                                const element = document.getElementById(id);
+                                const elementParent = document.getElementsByClassName('react-wrap')[0];
+                                const headerHeight = document.getElementsByClassName('header')[0].offsetHeight;
+                                const count = element.offsetTop - elementParent.scrollTop - headerHeight;
+                                elementParent.scrollBy({ top: count, left: 0, behavior: 'smooth' });
+                            }
                         }, 300);
                     } else {
                         setTimeout(scroll, 100);
@@ -61,18 +67,27 @@ class Index extends React.Component {
         const { hoveredImage } = this.state;
 
         return (
-            <main className="index wrapper" >
+            <main className="index wrapper">
                 <div className="index-content">
-                    {IndexProjectsToLoad.map((galleryObj, i) => (
-                        <div className="index-project-wrap" key={galleryObj + i} id={Object.keys(galleryObj)[0]} ref="list">
-                            <p className="index-project-wrap__heading ">{Object.keys(galleryObj)[0].replace(/_/g, ' ')}</p>
-                            <div className="index-project">
-                                {Object.values(galleryObj)[0].map((img, i) => (
-                                    <ImageItem key={img + i} gallery={galleryObj} index={i} img={img} />
-                                ))}
-                            </div>
-                        </div>
-                    ))}
+                    {IndexProjectsToLoad.map((galleryObj, i) => {
+                        this.projectIndex = i;
+                        if (i != 0 ) {
+                            return (
+                                <div className="index-project-wrap" key={galleryObj + i} id={Object.keys(galleryObj)[0]} ref="list">
+                                    <p className="index-project-wrap__heading ">{Object.keys(galleryObj)[0].replace(/_/g, ' ')}</p>
+                                    <div className="index-project">
+                                        {Object.values(galleryObj)[0].map((img, i) => (
+                                            <ImageItem key={img + i} gallery={galleryObj} index={i} img={img} />
+                                        ))}
+                                    </div>
+                                </div>
+                            )
+                        }
+                    }
+
+
+
+                    )}
                 </div>
             </main>
         );

@@ -486,6 +486,16 @@ button:focus {
   max-width: 100%;
   max-height: 100%;
 }
+.slider-slide__img.slider-slide__img_hover {
+  display: none;
+  position: absolute;
+  z-index: 4;
+}
+.slider-slide__img_progressive {
+  /* display: none; */
+  position: absolute;
+  /* transform: scale(2); */
+}
 
 .index {
   padding: 0 20px;
@@ -793,6 +803,8 @@ button:focus {
 .slick-slide {
   display: none;
   float: left;
+  overflow: hidden;
+  position: relative;
 
   height: 100%;
   min-height: 1px;
