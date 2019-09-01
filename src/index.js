@@ -15,17 +15,30 @@ import Footer from './components/Footer.js';
 import './styles/fonts.css';
 import './styles/style.css';
 
-<link rel="preload" as="font" href="/fonts/gt-america-standard-regular.ttf"/>
+<link rel="preload" as="font" href="/fonts/gt-america-standard-regular.ttf" />
 
 ReactDOM.render(
   <HashRouter>
     <div className="react-wrap">
       <Helmet>
+        <title>Evgeniy Pavlov Photography</title>
+
         <meta charSet="utf-8" />
-        <title>Pavlov Photo</title>
-        <base href="/"></base>
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+        <meta name="robots" content="index,follow" />
+        <meta name="description" content="Online archive of one of the founders of the worldwide-known Kharkiv School of Photogrpahy – Evgeniy Pavlov." />
+        <meta name="twitter:description" content="Online archive of one of the founders of the worldwide-known Kharkiv School of Photogrpahy – Evgeniy Pavlov." />
+        <meta property="og:description" content="Online archive of one of the founders of the worldwide-known Kharkiv School of Photogrpahy – Evgeniy Pavlov." />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Evgeniy Pavlov Photography" />
+        <meta property="og:title" content="Evgeniy Pavlov Photography" />
+        <meta property="og:url" content="[https://pavlovphoto-9c928.firebaseapp.com/#/](https://pavlovphoto-9c928.firebaseapp.com/#/)" />
+        <meta property="og:type" content="website" />
+
+        base={{ "target": "_blank", "href": "https://pavlovphoto-9c928.firebaseapp.com/#/" }}
 
       </Helmet>
       <Header />
