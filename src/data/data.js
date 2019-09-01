@@ -23,6 +23,7 @@ export const IndexProjectsToLoad = [
     },
     {
         orvochrome_1974_1985: [
+            ['tips can help '],
             [
                 require('../images/index-thumbnails/1974-1985-orwochrom/evgeniy-pavlov-orwochrom-01-1976.jpg'),
                 require('../images/index-hover/1974-1985-orwochrom/evgeniy-pavlov-orwochrom-01-1976.jpg'),
@@ -120,6 +121,9 @@ export const IndexProjectsToLoad = [
     {
         additions_1974_1989: [
             [
+                'a host put together'
+            ],
+            [
                 require('../images/index-thumbnails/1974-1989-additions/evgeniy-pavlov-additions-01-1974.jpg'),
                 require('../images/index-hover/1974-1989-additions/evgeniy-pavlov-additions-01-1974.jpg'),
             ],
@@ -188,6 +192,9 @@ export const IndexProjectsToLoad = [
     {
         love_1976: [
             [
+                'Barbecue party tips can help a host put together an extraordinary event for family and friends. Eating outdoors is a favorite pastime enjoyed by everyone and planning the event can help make it more memorable and stress-free for the host. Big or small, a barbecue party requires an adequate amount of planning and preparation to ensure that everything is laid out properly.'
+            ],
+            [
                 require('../images/index-thumbnails/1976-love/evgeniy-pavlov-love-1976-01.jpg'),
                 require('../images/index-hover/1976-love/evgeniy-pavlov-love-1976-01.jpg'),
             ],
@@ -215,6 +222,9 @@ export const IndexProjectsToLoad = [
     },
     {
         documental_photography_1977: [
+            [
+                'Barbecue party tips can help a host put together an extraordinary event for family and friends. Eating outdoors is a favorite pastime enjoyed by everyone and planning the event can help make it more memorable and stress-free for the host. Big or small, a barbecue party requires an adequate amount of planning and preparation to ensure that everything is laid out properly.'
+            ],
             [
                 require('../images/index-thumbnails/1977-documental-photography/evgeniy-pavlov-documental-photography-01-1969.jpg'),
                 require('../images/index-hover/1977-documental-photography/evgeniy-pavlov-documental-photography-01-1969.jpg'),
@@ -324,6 +334,9 @@ export const IndexProjectsToLoad = [
     {
         alcohol_psychosis_1983: [
             [
+                'Barbecue party tips can help a host put together an extraordinary event for family and friends. Eating outdoors is a favorite pastime enjoyed by everyone and planning the event can help make it more memorable and stress-free for the host. Big or small, a barbecue party requires an adequate amount of planning and preparation to ensure that everything is laid out properly.'
+            ],
+            [
                 require('../images/index-thumbnails/1983-alcohol-psychosis/evgeniy-pavlov-alcohol-psychosis-1983-01.jpg'),
                 require('../images/index-hover/1983-alcohol-psychosis/evgeniy-pavlov-alcohol-psychosis-1983-01.jpg'),
             ],
@@ -347,6 +360,9 @@ export const IndexProjectsToLoad = [
     },
     {
         montages_1984: [
+            [
+                'Barbecue party tips can help a host put together an extraordinary event for family and friends. Eating outdoors is a favorite pastime enjoyed by everyone and planning the event can help make it more memorable and stress-free for the host. Big or small, a barbecue party requires an adequate amount of planning and preparation to ensure that everything is laid out properly.'
+            ],
             [
                 require('../images/index-thumbnails/1984-montages/evgeniy-pavlov-montages-1974-01.jpg'),
                 require('../images/index-hover/1984-montages/evgeniy-pavlov-montages-1974-01.jpg'),
@@ -432,6 +448,9 @@ export const IndexProjectsToLoad = [
     {
         IxSeven_1987: [
             [
+                'Barbecue party tips can help a host put together an extraordinary event for family and friends. Eating outdoors is a favorite pastime enjoyed by everyone and planning the event can help make it more memorable and stress-free for the host. Big or small, a barbecue party requires an adequate amount of planning and preparation to ensure that everything is laid out properly.'
+            ],
+            [
                 require('../images/index-thumbnails/1987-1x7//evgeniy-pavlov-1x7-1987-01.jpg'),
                 require('../images/index-hover/1987-1x7//evgeniy-pavlov-1x7-1987-01.jpg'),
             ],
@@ -448,6 +467,9 @@ export const IndexProjectsToLoad = [
     {
         blatari_vospoda_1989: [
             [
+                'Barbecue party tips can help a host put together an extraordinary event for family and friends. Eating outdoors is a favorite pastime enjoyed by everyone and planning the event can help make it more memorable and stress-free for the host. Big or small, a barbecue party requires an adequate amount of planning and preparation to ensure that everything is laid out properly.'
+            ],
+            [
                 require('../images/index-thumbnails/1989-blatari-wospoda/evgeniy-pavlov-blatari-vospoda-1989-01.jpg'),
                 require('../images/index-hover/1989-blatari-wospoda/evgeniy-pavlov-blatari-vospoda-1989-01.jpg'),
             ],
@@ -463,6 +485,9 @@ export const IndexProjectsToLoad = [
     },
     {
         eclipse_1989: [
+            [
+                ''
+            ],
             [
                 require('../images/index-thumbnails/1989-eclipse/evgeniy-pavlov-eclipse-1989-01.jpg'),
                 require('../images/index-hover/1989-eclipse/evgeniy-pavlov-eclipse-1989-01.jpg'),
@@ -496,6 +521,9 @@ export const IndexProjectsToLoad = [
     {
         energetic_portraits_1989: [
             [
+                ''
+            ],
+            [
                 require('../images/index-thumbnails/1989-energetic-portraits/evgeniy-pavlov-energetic-portraits-1989-01.jpg'),
                 require('../images/index-hover/1989-energetic-portraits/evgeniy-pavlov-energetic-portraits-1989-01.jpg'),
             ],
@@ -523,6 +551,9 @@ export const IndexProjectsToLoad = [
     },
     {
         total_photography_1990_1994: [
+            [
+                'text'
+            ],
             [
                 require('../images/index-thumbnails/1990-1994-total-photography/evgeniy-pavlov-total-photography-01-1990-1994.jpg'),
                 require('../images/index-hover/1990-1994-total-photography/evgeniy-pavlov-total-photography-01-1990-1994.jpg'),
@@ -692,6 +723,9 @@ export const IndexProjectsToLoad = [
     {
         the_life_of_factory_1990: [
             [
+                'text'
+            ],
+            [
                 require('../images/index-thumbnails/1990-the-life-of-factory/evgeniy-pavlov-the-life-of-the-factory-1990-01.jpg'),
                 require('../images/index-hover/1990-the-life-of-factory/evgeniy-pavlov-the-life-of-the-factory-1990-01.jpg'),
             ],
@@ -723,6 +757,9 @@ export const IndexProjectsToLoad = [
     },
     {
         archive_series_1995: [
+            [
+                'text'
+            ],
             [
                 require('../images/index-thumbnails/1995-archive-series/evgeniy-pavlov-archive-series-1995-01.jpg'),
                 require('../images/index-hover/1995-archive-series/evgeniy-pavlov-archive-series-1995-01.jpg'),
@@ -803,6 +840,9 @@ export const IndexProjectsToLoad = [
     },
     {
         common_field_1996: [
+            [
+                'text'
+            ],
             [
                 require('../images/index-thumbnails/1996-common-field/evgeniy-pavlov-vladimir-shaposhnikov-common-field-01-1996.jpg'),
                 require('../images/index-hover/1996-common-field/evgeniy-pavlov-vladimir-shaposhnikov-common-field-01-1996.jpg'),
@@ -908,6 +948,9 @@ export const IndexProjectsToLoad = [
     {
         Хparied_still_lifes_1998: [
             [
+                'text'
+            ],
+            [
                 require('../images/index-thumbnails/1998-paired-still-lifes/evgeniy-pavlov-paired-still-lifes-1998-01.jpg'),
                 require('../images/index-hover/1998-paired-still-lifes/evgeniy-pavlov-paired-still-lifes-1998-01.jpg'),
             ],
@@ -968,6 +1011,9 @@ export const IndexProjectsToLoad = [
     {
         parnography_1998: [
             [
+                'text'
+            ],
+            [
                 require('../images/index-thumbnails/1998-parnography/evgeniy-pavlov-parnography-01-1998.jpg'),
                 require('../images/index-hover/1998-parnography/evgeniy-pavlov-parnography-01-1998.jpg'),
             ],
@@ -1011,6 +1057,9 @@ export const IndexProjectsToLoad = [
     },
     {
         home_life_book_2002: [
+            [
+                'text'
+            ],
             [
                 require('../images/index-thumbnails/2002-home-life-book/evgeniy-pavlov-home-life-book-2002-01.jpg'),
                 require('../images/index-hover/2002-home-life-book/evgeniy-pavlov-home-life-book-2002-01.jpg'),
@@ -1099,6 +1148,9 @@ export const IndexProjectsToLoad = [
     },
     {
         second_heaven_2003: [
+            [
+                'text'
+            ],
             [
                 require('../images/index-thumbnails/2003-second-heaven/evgeniy-pavlov-vladimir-shaposhnikov-the-second-heaven-01.jpg'),
                 require('../images/index-hover/2003-second-heaven/evgeniy-pavlov-vladimir-shaposhnikov-the-second-heaven-01.jpg'),
