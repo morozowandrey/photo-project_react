@@ -35,10 +35,10 @@ ReactDOM.render(
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Evgeniy Pavlov Photography" />
         <meta property="og:title" content="Evgeniy Pavlov Photography" />
-        <meta property="og:url" content="[https://pavlovphoto-9c928.firebaseapp.com/#/](https://pavlovphoto-9c928.firebaseapp.com/#/)" />
+        <meta property="og:url" content="[https://evgeniypavlov.com](https://evgeniypavlov.com)" />
         <meta property="og:type" content="website" />
 
-        base={{ "target": "_blank", "href": "https://pavlovphoto-9c928.firebaseapp.com/#/" }}
+        <base href="/"></base>
 
       </Helmet>
       <Header />
