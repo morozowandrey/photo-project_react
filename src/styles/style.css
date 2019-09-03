@@ -494,7 +494,7 @@ button:focus {
 .slider-slide__img_progressive {
   /* display: none; */
   position: absolute;
-  transform: scale(2.5);
+  /* transform: scale(2.5); */
 }
 
 .index {
