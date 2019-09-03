@@ -19,11 +19,11 @@ class Index extends React.Component {
     }
 
     componentDidMount() {
-
         window.addEventListener('scroll', this.handleScroll);
 
         let scrollToLocation = () => {
             const { hash } = window.location;
+
             if (hash !== '') {
                 let retries = 0;
                 let footerPath = window.location.hash.split('/');
@@ -38,7 +38,7 @@ class Index extends React.Component {
                             const headerHeight = document.getElementsByClassName('header')[0].offsetHeight;
                             const count = element.offsetTop - elementParent.scrollTop - headerHeight;
                             elementParent.scrollBy({ top: count, left: 0, behavior: 'smooth' });
-                        }, 300);
+                        }, 1500);
                     } else {
                         setTimeout(scroll, 100);
                     }

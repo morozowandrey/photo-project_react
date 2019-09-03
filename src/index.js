@@ -47,7 +47,7 @@ ReactDOM.render(
       <Route path="/contact" component={Contact} />
       <Route path="/info" component={Info} />
       <Route path="/project-info" component={ProjectInfo} />
-      <Route path="/slider/:sliderId/:slideNum" component={Slider} />
+      <Route path="/slider/:sliderId/:slideNum" component={Slider}/>
       <Footer />
     </div>
   </HashRouter>,

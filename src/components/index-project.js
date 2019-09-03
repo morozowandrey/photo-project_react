@@ -27,9 +27,9 @@ class Index extends React.Component {
     render() {
         const { gallery, img, index } = this.props;
         const { isHovering, progressive } = this.state;
-        
+
         if (index == 0) return null
-        
+
         return (
             <Link
                 to={`/slider/${Object.keys(gallery)[0]}/${(index + 1)}`}

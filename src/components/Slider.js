@@ -59,7 +59,7 @@ class SliderComponent extends React.Component {
             className: 'slick-slider-fade',
             cssEase: 'none',
             lazyLoad: true,
-            dots: true,
+            dots: false,
             onInit: (event, slick, currentSlide, nextSlide) => {
                 var currentSlide = this.refs.slider.innerSlider.props.initialSlide + 1;
                 var slideCount = this.refs.slider.props.children.length;
